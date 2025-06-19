@@ -58,7 +58,7 @@ class TestUI(TestCase):
 
 
     def test8_passing_to_webster(self):
-        self.driver.find_element(By.XPATH, '/html/body/section/main/div[3]/ul/li[3]/a').click()
+        self.driver.find_element(By.LINK_TEXT, 'Merriam-Webster Dictionary').click()
         outer_url = self.driver.current_url
         self.assertEqual('https://www.merriam-webster.com/', outer_url)
 
